@@ -1,0 +1,1431 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f7f5ef;
+  color: #171717;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* NAVBAR */
+
+.navbar {
+  width: 100%;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  border-bottom: 1px solid #dedbd2;
+  background: rgba(247, 245, 239, 0.9);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #171717;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-links a {
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  opacity: 0.55;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 650px;
+  padding: 90px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border: 1px solid #d8d4ca;
+  border-radius: 100px;
+  font-size: 13px;
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 0.98;
+  letter-spacing: -4px;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  display: block;
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+
+.hero p {
+  margin-top: 30px;
+  max-width: 620px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #62605a;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.primary-btn {
+  background: #171717;
+  color: white;
+}
+
+.secondary-btn {
+  border: 1px solid #cfcac0;
+}
+
+/* HERO SOUND */
+
+.hero-sound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 350px;
+}
+
+.sound-circle {
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  border: 1px solid #cfcac0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #eeece5;
+  position: relative;
+}
+
+.sound-circle span {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 150px;
+  line-height: 1;
+}
+
+.sound-label {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.sound-label strong {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 18px;
+}
+
+.sound-label small {
+  color: #77736c;
+  margin-top: 3px;
+}
+
+/* FEATURES */
+
+.features {
+  padding: 30px 7% 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.feature-card {
+  border: 1px solid #dedbd2;
+  border-radius: 18px;
+  padding: 28px;
+  background: #faf9f5;
+}
+
+.feature-card svg {
+  margin-bottom: 25px;
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+
+.feature-card p {
+  color: #6d6a63;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-sound {
+    width: 100%;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 60px 6%;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+
+  .sound-circle {
+    width: 260px;
+    height: 260px;
+  }
+
+  .sound-circle span {
+    font-size: 110px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    padding: 20px 6% 70px;
+  }
+}
+/* =========================
+   LEARN PAGE
+========================= */
+
+.learn-page {
+  min-height: 100vh;
+  padding: 80px 7%;
+}
+
+
+/* HEADER */
+
+.learn-header {
+  max-width: 850px;
+  margin-bottom: 70px;
+}
+
+.section-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #77736c;
+  margin-bottom: 18px;
+}
+
+.learn-header h1 {
+  font-size: clamp(55px, 7vw, 90px);
+  line-height: 0.95;
+  letter-spacing: -4px;
+  font-weight: 800;
+}
+
+.learn-header h1 span {
+  display: block;
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+
+.learn-description {
+  margin-top: 28px;
+  max-width: 650px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #68655e;
+}
+
+
+/* SELECTED SOUND */
+
+.selected-sound {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 50px;
+  padding: 45px;
+  border: 1px solid #d9d5cc;
+  border-radius: 24px;
+  background: #eeece5;
+  margin-bottom: 100px;
+}
+
+.selected-symbol {
+  height: 280px;
+  border-radius: 20px;
+  background: #f8f7f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 150px;
+}
+
+.selected-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.selected-category {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 15px;
+  color: #77736c;
+}
+
+.selected-info h2 {
+  font-size: 42px;
+  margin: 5px 0 12px;
+}
+
+.selected-info > p {
+  color: #6b6861;
+  line-height: 1.6;
+}
+
+.sound-details {
+  display: flex;
+  gap: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.sound-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sound-details span {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #858078;
+}
+
+.sound-details strong {
+  font-size: 15px;
+}
+
+.listen-btn {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: none;
+  background: #171717;
+  color: white;
+  padding: 13px 19px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+/* SOUND SECTION */
+
+.sound-section {
+  margin-bottom: 100px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.section-heading h2 {
+  font-size: 34px;
+}
+
+.section-heading > span {
+  color: #77736c;
+  font-size: 13px;
+}
+
+
+/* VOWELS */
+
+.vowel-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.vowel-card {
+  min-height: 140px;
+  border: 1px solid #dedbd2;
+  border-radius: 16px;
+  background: #faf9f5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.vowel-card:hover {
+  transform: translateY(-4px);
+  border-color: #aaa59b;
+}
+
+.vowel-card.active {
+  background: #171717;
+  color: white;
+}
+
+.vowel-symbol {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 48px;
+}
+
+.vowel-name {
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+
+/* CONSONANTS */
+
+.consonant-groups {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.consonant-group {
+  border: 1px solid #dedbd2;
+  border-radius: 20px;
+  padding: 25px;
+  background: #faf9f5;
+}
+
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.group-header h3 {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 24px;
+}
+
+.group-header p {
+  font-size: 12px;
+  color: #77736c;
+  margin-top: 3px;
+}
+
+.group-header > span {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 13px;
+  color: #77736c;
+}
+
+.consonant-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.consonant-card {
+  height: 75px;
+  border: 1px solid #dedbd2;
+  background: #f2f0ea;
+  border-radius: 12px;
+
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 32px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.consonant-card:hover {
+  background: #171717;
+  color: white;
+}
+
+.group-footer {
+  border-top: 1px solid #dedbd2;
+  margin-top: 22px;
+  padding-top: 15px;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 12px;
+}
+
+.group-footer span {
+  color: #77736c;
+}
+
+.group-footer strong {
+  font-weight: 600;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .selected-sound {
+    grid-template-columns: 1fr;
+  }
+
+  .selected-symbol {
+    height: 220px;
+  }
+
+  .vowel-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .consonant-groups {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .learn-page {
+    padding: 60px 6%;
+  }
+
+  .learn-header h1 {
+    font-size: 52px;
+    letter-spacing: -2px;
+  }
+
+  .selected-sound {
+    padding: 20px;
+    gap: 25px;
+  }
+
+  .selected-symbol {
+    height: 200px;
+    font-size: 110px;
+  }
+
+  .vowel-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sound-details {
+    gap: 25px;
+  }
+
+  .consonant-groups {
+    grid-template-columns: 1fr;
+  }
+
+}
+/* =========================
+   SOUND CHART
+========================= */
+
+.chart-page {
+  min-height: 100vh;
+  padding: 80px 7%;
+}
+
+
+/* HEADER */
+
+.chart-header {
+  max-width: 850px;
+  margin-bottom: 80px;
+}
+
+.chart-header h1 {
+  font-size: clamp(55px, 7vw, 90px);
+  line-height: 0.95;
+  letter-spacing: -4px;
+  font-weight: 800;
+}
+
+.chart-header h1 span {
+  display: block;
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+
+.chart-header > p:last-child {
+  max-width: 650px;
+  margin-top: 28px;
+  color: #69665f;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+
+/* ARTICULATION */
+
+.articulation-section {
+  margin-bottom: 90px;
+}
+
+.articulation-intro {
+  margin-bottom: 30px;
+}
+
+.articulation-intro h2 {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+
+.articulation-intro p:last-child {
+  color: #77736c;
+  line-height: 1.6;
+}
+
+
+/* ARTICULATION CARDS */
+
+.articulation-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.articulation-card {
+  min-height: 220px;
+  padding: 22px;
+  border: 1px solid #dedbd2;
+  border-radius: 18px;
+  background: #faf9f5;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  transition: 0.25s;
+}
+
+.articulation-card:hover {
+  transform: translateY(-5px);
+}
+
+.articulation-card.selected {
+  background: #171717;
+  color: white;
+}
+
+.articulation-number {
+  font-size: 11px;
+  color: #88847c;
+}
+
+.articulation-card.selected .articulation-number {
+  color: #aaa;
+}
+
+.articulation-icon {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #d8d4ca;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 35px 0 22px;
+}
+
+.articulation-card.selected .articulation-icon {
+  border-color: #555;
+}
+
+.articulation-card h3 {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 20px;
+}
+
+.articulation-card p {
+  font-size: 12px;
+  color: #77736c;
+  margin-top: 4px;
+}
+
+.articulation-card.selected p {
+  color: #aaa;
+}
+
+.articulation-card strong {
+  display: block;
+  margin-top: 20px;
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 14px;
+}
+
+
+/* SELECTED GROUP */
+
+.selected-group {
+  border: 1px solid #d8d4ca;
+  border-radius: 24px;
+  padding: 45px;
+  background: #eeece5;
+  margin-bottom: 100px;
+}
+
+.selected-group-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+
+.selected-group-header h2 {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 50px;
+}
+
+.selected-group-header p:last-child {
+  margin-top: 5px;
+  color: #77736c;
+}
+
+.selected-place {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #d0ccc2;
+  padding: 10px 14px;
+  border-radius: 100px;
+  font-size: 12px;
+}
+
+
+/* SOUNDS */
+
+.chart-sounds {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.chart-sound-card {
+  height: 190px;
+  border: 1px solid #d7d3c9;
+  border-radius: 18px;
+  background: #f8f7f3;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-sound-number {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  font-size: 10px;
+  color: #99958d;
+}
+
+.chart-sound-symbol {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 75px;
+}
+
+.chart-sound-card button {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid #d5d1c7;
+  border-radius: 50%;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.chart-sound-card button:hover {
+  background: #171717;
+  color: white;
+}
+
+
+/* GROUP INFORMATION */
+
+.group-explanation {
+  border-top: 1px solid #d2cec4;
+  margin-top: 30px;
+  padding-top: 25px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.group-explanation div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.group-explanation span {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #858178;
+}
+
+.group-explanation strong {
+  font-size: 15px;
+}
+
+
+/* PHONETIC ORDER */
+
+.phonetic-order {
+  max-width: 950px;
+  margin-bottom: 100px;
+}
+
+.phonetic-order h2 {
+  font-size: 42px;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+}
+
+.phonetic-order > p:not(.section-label) {
+  color: #6b6861;
+  line-height: 1.7;
+  max-width: 650px;
+}
+
+.order-flow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 35px;
+}
+
+.order-flow div {
+  border: 1px solid #dedbd2;
+  border-radius: 16px;
+  padding: 22px;
+  background: #faf9f5;
+}
+
+.order-flow strong {
+  display: block;
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.order-flow span {
+  font-size: 11px;
+  color: #77736c;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+  .articulation-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .chart-sounds {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .order-flow {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .chart-page {
+    padding: 60px 6%;
+  }
+
+  .chart-header h1 {
+    font-size: 52px;
+    letter-spacing: -2px;
+  }
+
+  .articulation-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .selected-group {
+    padding: 25px;
+  }
+
+  .selected-group-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .chart-sounds {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .group-explanation {
+    grid-template-columns: 1fr;
+  }
+
+  .order-flow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  .articulation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-sounds {
+    grid-template-columns: 1fr;
+  }
+
+  .order-flow {
+    grid-template-columns: 1fr;
+  }
+
+}
+/* =========================
+   PRONUNCIATION LAB
+========================= */
+
+.pronunciation-page {
+  min-height: 100vh;
+  padding: 80px 7%;
+}
+
+
+/* HEADER */
+
+.pronunciation-header {
+  max-width: 800px;
+  margin-bottom: 65px;
+}
+
+.pronunciation-header h1 {
+  font-size: clamp(55px, 7vw, 90px);
+  line-height: 0.95;
+  letter-spacing: -4px;
+  font-weight: 800;
+}
+
+.pronunciation-header h1 span {
+  display: block;
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+
+.pronunciation-header > p:last-child {
+  max-width: 620px;
+  margin-top: 28px;
+  color: #69665f;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* LAB */
+
+.pronunciation-lab {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 18px;
+  margin-bottom: 100px;
+}
+
+
+/* TARGET */
+
+.target-panel,
+.record-panel {
+  border: 1px solid #dedbd2;
+  border-radius: 24px;
+  background: #faf9f5;
+  padding: 40px;
+}
+
+.target-panel {
+  background: #eeece5;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.panel-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #77736c;
+}
+
+
+.target-symbol {
+  width: 240px;
+  height: 240px;
+  margin: 35px 0 25px;
+
+  border-radius: 50%;
+  background: #f8f7f3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 130px;
+}
+
+.target-panel h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.target-meta {
+  display: flex;
+  gap: 8px;
+  margin: 15px 0 25px;
+}
+
+.target-meta span {
+  padding: 7px 12px;
+  border: 1px solid #d1cdc3;
+  border-radius: 100px;
+  font-size: 11px;
+
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+
+.hear-button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  border: none;
+  background: #171717;
+  color: white;
+
+  padding: 13px 18px;
+  border-radius: 10px;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+/* RECORD PANEL */
+
+.record-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.record-panel > .panel-label {
+  align-self: flex-start;
+}
+
+
+/* RECORD BUTTON */
+
+.record-circle {
+  width: 210px;
+  height: 210px;
+
+  border-radius: 50%;
+  border: 1px solid #d3cfc5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 35px 0 20px;
+
+  position: relative;
+}
+
+.record-circle::before {
+  content: "";
+
+  position: absolute;
+
+  width: 165px;
+  height: 165px;
+
+  border-radius: 50%;
+
+  border: 1px dashed #c9c5bb;
+}
+
+.record-circle.recording {
+  animation: pulse-recording 1.4s infinite;
+}
+
+@keyframes pulse-recording {
+
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+
+.record-action {
+  width: 75px;
+  height: 75px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #171717;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  position: relative;
+  z-index: 2;
+}
+
+.record-action.stop {
+  background: #444;
+}
+
+
+.record-status {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.record-status strong {
+  font-size: 16px;
+}
+
+.record-status span {
+  font-size: 12px;
+  color: #77736c;
+}
+
+
+/* AUDIO */
+
+.recorded-audio {
+  width: 100%;
+  margin-top: 30px;
+
+  padding-top: 25px;
+  border-top: 1px solid #dedbd2;
+}
+
+.recorded-audio p {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #77736c;
+}
+
+.recorded-audio audio {
+  width: 100%;
+}
+
+
+.reset-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 12px;
+
+  border: none;
+  background: transparent;
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+
+/* RESULT */
+
+.pronunciation-result {
+  width: 100%;
+
+  margin-top: 25px;
+  padding: 20px;
+
+  border: 1px solid #d4d0c6;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.result-icon {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  background: #e8e6df;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pronunciation-result div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.pronunciation-result span {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #77736c;
+}
+
+.pronunciation-result strong {
+  font-size: 28px;
+  margin: 2px 0;
+}
+
+.pronunciation-result p {
+  font-size: 12px;
+  color: #77736c;
+}
+
+
+/* SOUND SELECTOR */
+
+.sound-selector {
+  margin-bottom: 100px;
+}
+
+.selector-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 25px;
+}
+
+.selector-heading h2 {
+  font-size: 34px;
+}
+
+.selector-heading > span {
+  font-size: 12px;
+  color: #77736c;
+}
+
+
+.practice-sounds {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  gap: 10px;
+}
+
+
+.practice-sound {
+  height: 120px;
+
+  border: 1px solid #dedbd2;
+  border-radius: 15px;
+
+  background: #faf9f5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.practice-sound:hover {
+  transform: translateY(-4px);
+}
+
+.practice-sound.active {
+  background: #171717;
+  color: white;
+}
+
+.practice-sound span {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 38px;
+}
+
+.practice-sound small {
+  font-size: 10px;
+  opacity: 0.55;
+  margin-top: 5px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+  .pronunciation-lab {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-sounds {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .pronunciation-page {
+    padding: 60px 6%;
+  }
+
+  .pronunciation-header h1 {
+    font-size: 52px;
+    letter-spacing: -2px;
+  }
+
+  .target-panel,
+  .record-panel {
+    padding: 25px;
+  }
+
+  .target-symbol {
+    width: 190px;
+    height: 190px;
+    font-size: 105px;
+  }
+
+  .practice-sounds {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .selector-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+}
